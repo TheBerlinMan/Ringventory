@@ -1,3 +1,7 @@
 html, body{
-background-color: pink;
+background-color: rosybrown;
+}
+
+.logo-small{
+  height:70px;
 }

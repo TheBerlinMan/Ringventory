@@ -5,10 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="shortcut icon"
+  type="image/png"
+  href="{% static 'images/Asset 3.svg' %}"
+>
   <link 
     rel="shortcut icon"
     type="image/png"
-    href="{% static 'images/ring3.svg' %}"
+    href="{% static 'images/Asset 3.svg' %}"
   > 
   <title>Ringventory</title>
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
@@ -20,8 +25,9 @@
     <div class="header-logo-container">
       <a href="/">
         <img 
-          src="{% static 'images/ring3.svg' %}"
+          src="{% static 'images/Asset 3.svg' %}"
           alt="The Ringventory Logo"
+          class='logo-small'
         >
       </a>
     </div>
@@ -30,6 +36,9 @@
         <li><a href="/about">Inventory</a></li>
         <li><a href="/about">Purchase</a></li>
         <li><a href="/about">About</a></li>
+        <li><a href="/about">Sign Up</a></li>
+        <li><a href="/about">Sign In</a></li>
+        <li><a href="/about">Sign Out</a></li>
       </ul>
     </nav>
   </header>
