@@ -31,15 +31,20 @@ html, body{
 }
 
 .footer > p{
-  font-size: 12px;
+  font-size: 8px;
   margin: 0;
+  margin-top: 4px;
   padding: 0;
+}
+
+.footer > .icons {
+  margin-top: 4px;
 }
 
 
 .logo-small{
-  height:70px;
-  margin-bottom: 30px;
+  width: 120px;
+  margin-bottom: 20px;
 }
 
 .links{
@@ -56,9 +61,12 @@ ul > li{
   
   list-style-type: none;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
+  margin-bottom: 4px;
   padding: 0;
+  text-align: right;
+
 }
 
 ul > li > a{
@@ -79,4 +87,9 @@ ul > li > a:hover{
 }
 .footer > .icons > a:hover{
   cursor: pointer;
+}
+
+.footer > hr{
+  width: 100%;
+  border: solid 1px;
 }
