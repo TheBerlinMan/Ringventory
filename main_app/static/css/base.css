@@ -1,7 +1,82 @@
 html, body{
-background-color: rosybrown;
+  
+  font-family: inter;
+  background-color: rosybrown;
+  margin: 0;
+  padding: 0;
 }
+
+.main-con{
+  display: flex;
+  height: 100vh;
+}
+
+.panel{
+  background-color: rgba(255, 255, 255, 20%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  /* min-height:500px; */
+
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer > p{
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
 
 .logo-small{
   height:70px;
+  margin-bottom: 30px;
+}
+
+.links{
+  /* align-items: center; */
+  margin-bottom: 30px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+ul > li{
+  
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li > a{
+  text-decoration: none;
+  color: black;
+  
+}
+
+ul > li > a:hover{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  
+}
+
+.footer > .icons > a{
+  color: black;
+}
+.footer > .icons > a:hover{
+  cursor: pointer;
 }

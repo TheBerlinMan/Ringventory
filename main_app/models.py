@@ -23,6 +23,7 @@ class Ring(models.Model):
   metal = models.CharField(max_length=250)
   stone = models.CharField(max_length=250)
   condition = models.CharField(
+    #  condition should link to CONDITION - need to adjust
      choices = STATUS,
      default=STATUS[0][0]
   )

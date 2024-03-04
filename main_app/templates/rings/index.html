@@ -17,7 +17,7 @@
 </section>
 
 <section class="card-container">
-  {% for ring in inventory %}
+  {% for ring in rings %}
     <div class="card">
       <div class="card-content">
         <div class="card-img-container">
@@ -28,11 +28,11 @@
         </div>
         <h2 class="card-title">{{ ring.name }}</h2>
         
-          <p>A {{ ring.age }} year old {{ ring.breed }}</p>
+          <p> condition:{{ ring.condition }}</p>
         
-          <p>A {{ ring.breed }} kitten.</p>
+          <p>sz {{ ring.size }} </p> 
         
-        <p><small>{{ ring.description }}</small></p>
+        
       </div>
     </div>
   {% endfor %}

@@ -16,36 +16,47 @@
     href="{% static 'images/Asset 3.svg' %}"
   > 
   <title>Ringventory</title>
+  <script src="https://kit.fontawesome.com/b1dfb15672.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
   {% block head %}
   {% endblock %}
 </head>
 <body>
-  <header>
-    <div class="header-logo-container">
-      <a href="/">
-        <img 
+  <div class='main-con'>
+    
+    <header class='panel'>
+      <div class="panel-top">
+        <a href="/">
+          <img 
+          class='logo-small'
           src="{% static 'images/Asset 3.svg' %}"
           alt="The Ringventory Logo"
-          class='logo-small'
-        >
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="/inventory">Inventory</a></li>
-        <li><a href="/collections">Collections</a></li>
-        <li><a href="/purchases">Purchases</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/signup">Sign Up</a></li>
-        <li><a href="/signin">Sign In</a></li>
-        <li><a href="/signout">Sign Out</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    {% block content %}
-    {% endblock content %}
-  </main>
+          >
+        </a>
+        <nav class='links'>
+          <ul>
+            <li><a href="/inventory">Inventory</a></li>
+            <li><a href="/purchases">Purchases</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/signin">Sign In</a></li>
+            <li><a href="/signout">Sign Out</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer">
+        <div class='icons'>
+          
+          <a href=""><i class="fab fa-github"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p><b>©️</b>2024</p>
+      </div>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock content %}
+    </main>
+  </div>
 </body>
 </html>
