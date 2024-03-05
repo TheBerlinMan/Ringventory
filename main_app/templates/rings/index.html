@@ -11,31 +11,37 @@
 
 {% block content %}
 
-<section class="page-header">
-  <h1>Inventory</h1>
-
-</section>
-
-<section class="card-container">
-  {% for ring in rings %}
-    <div class="card">
-      <div class="card-content">
-        <div class="card-img-container">
-          <img 
-            src="{% static 'images/ring3.svg' %}" 
+<div class="top">
+  
+  <section class="page-header">
+    <h1>Inventory</h1>
+    <button>Add Ring</button>
+    
+  </section>
+</div>
+<div class="bottom">
+  
+  <section class="card-container">
+    {% for ring in rings %}
+    <a href="">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-img-container">
+            <img 
+            class='default-img'
+            src="{% static 'images/default-ring.jpeg' %}" 
             alt="a ring"
-          >
-        </div>
-        <h2 class="card-title">{{ ring.name }}</h2>
-        
+            >
+          </div>
+          <h2 class="card-title">{{ ring.name }}</h2>
           <p> condition:{{ ring.condition }}</p>
-        
-          <p>sz {{ ring.size }} </p> 
-        
-        
+          <p>sz {{ ring.size }} </p>       
+        </div>
       </div>
-    </div>
-  {% endfor %}
-</section>
+    </a>
+    {% endfor %}
+  </section>
+</div>
+
 
 {% endblock content %}
