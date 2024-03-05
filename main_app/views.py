@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Ring
 
 
@@ -16,3 +17,7 @@ def ring_index(request):
 def ring_detail(request, ring_id):
   ring = Ring.objects.get(id=ring_id)
   return render(request, 'rings/detail.html', { 'ring': ring })
+
+class RingCreate(CreateView):
+  model = Ring
+  fields = '__all__'
