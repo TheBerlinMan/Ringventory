@@ -23,7 +23,7 @@
   
   <section class="card-container">
     {% for ring in rings %}
-    <a href="">
+    <a href="{% url 'ring-detail' ring.id %}">
       <div class="card">
         <div class="card-content">
           <div class="card-img-container">
