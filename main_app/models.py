@@ -1,6 +1,6 @@
 from django.db import models
+from django.urls import reverse
 
-# Create your models here.
 
 STATUS= (
    ('UN', 'Unlisted'),
@@ -34,4 +34,8 @@ class Ring(models.Model):
 
   def __str__(self):
       return f"{self.name}, sz {self.size}, status {self.status}"
+  
+  def get_absolute_url(self):
+      return reverse("ring_detail", kwargs={"ring_id": self.id})
+  
   
