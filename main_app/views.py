@@ -12,3 +12,7 @@ def ring_index(request):
   rings = Ring.objects.all()
   return render(request, 'rings/index.html',
   { 'rings': rings })
+
+def ring_detail(request, ring_id):
+  ring = Ring.objects.get(id=ring_id)
+  return render(request, 'rings/detail.html', { 'ring': ring })
