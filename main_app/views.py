@@ -3,6 +3,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Ring
 
 
@@ -12,16 +14,18 @@ class Home(LoginView):
 def about(request):
   return render(request, 'about.html')
 
+@login_required
 def ring_index(request):
-  rings = Ring.objects.all()
+  rings = Ring.objects.filter(user=request.user)
   return render(request, 'rings/index.html',
   { 'rings': rings })
 
+@login_required
 def ring_detail(request, ring_id):
   ring = Ring.objects.get(id=ring_id)
   return render(request, 'rings/detail.html', { 'ring': ring })
 
-class RingCreate(CreateView):
+class RingCreate(LoginRequiredMixin, CreateView):
   model = Ring
   fields = '__all__'
   success_url= '/inventory/'
@@ -31,11 +35,11 @@ class RingCreate(CreateView):
     return super().form_valid(form)
   
 
-class RingUpdate(UpdateView):
+class RingUpdate(LoginRequiredMixin, UpdateView):
   model = Ring
   fields = '__all__'
 
-class RingDelete(DeleteView):
+class RingDelete(LoginRequiredMixin, DeleteView):
   model = Ring
   fields = '__all__'
   success_url='/inventory/'
