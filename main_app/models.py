@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 
 STATUS= (
@@ -31,6 +32,7 @@ class Ring(models.Model):
   price = models.IntegerField()
   purchase_point = models.CharField(max_length=250)
   purchase_date = models.DateField()
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):
       return f"{self.name}, sz {self.size}, status {self.status}"
