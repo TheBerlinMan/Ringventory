@@ -57,3 +57,7 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'signup.html', context)
+
+@login_required
+def purchase_index(request):
+  return render(request, 'purchases/index.html')

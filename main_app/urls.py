@@ -5,6 +5,7 @@ urlpatterns = [
   path('', views.Home.as_view(), name='home'),
   path('about/', views.about, name='about'),
   path('inventory/', views.ring_index, name='ring-index'),
+  path('purchases/', views.purchase_index, name='purchase-index'),
   path('inventory/<int:ring_id>', views.ring_detail, name='ring-detail'),
   path('inventory/create/', views.RingCreate.as_view(), name='ring-create'),
   path('inventory/<int:pk>/update>', views.RingUpdate.as_view(), name='ring-update'),
