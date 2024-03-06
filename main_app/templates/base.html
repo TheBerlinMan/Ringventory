@@ -35,12 +35,16 @@
         </a>
         <nav class='links'>
           <ul>
-            <li><a href="{% url 'ring-index' %}">Inventory</a></li>
-            <li><a href="/purchases">Purchases</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="/signup">Sign Up</a></li>
-            <li><a href="/signin">Sign In</a></li>
-            <li><a href="/signout">Sign Out</a></li>
+            {% if user.is_authenticated %}
+              <li><a href="{% url 'ring-index' %}">Inventory</a></li>
+              <li><a href="/purchases">Purchases</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="/signout">Sign Out</a></li>
+            {% else %}
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="/signin">Sign In</a></li>
+              <li><a href="/signup">Sign Up</a></li>
+            {% endif %}
           </ul>
         </nav>
       </div>
