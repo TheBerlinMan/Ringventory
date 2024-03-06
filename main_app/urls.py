@@ -10,4 +10,5 @@ urlpatterns = [
   path('inventory/<int:pk>/update>', views.RingUpdate.as_view(), name='ring-update'),
   path('inventory/<int:pk>/delete>', views.RingDelete.as_view(), name='ring-delete'),
   path('accounts/', include('django.contrib.auth.urls')),
+  path('accounts/signup/', views.signup, name='signup'),
 ]
