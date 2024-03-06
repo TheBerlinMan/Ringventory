@@ -15,8 +15,10 @@
   
   <section class="page-header">
     <h1>Ring #{{ring.id}}</h1>
-    <a href="{% url 'ring-update' ring.id %}">Edit Ring</a>
-    <a href="{% url 'ring-delete' ring.id %}">Delete Ring</a>
+    <div class="buttons">
+      <a href="{% url 'ring-update' ring.id %}">Edit Ring</a>
+      <a href="{% url 'ring-delete' ring.id %}">Delete Ring</a>
+    </div>
     
   </section>
 </div>
@@ -29,7 +31,7 @@
     > {% endcomment %}
   </div>
   <div class="ring-details">
-    <h1>{{ ring.name }}</h1>
+    <h2>{{ ring.name }}</h2>
     <p>{{ ring.size }}</p>
     <p>{{ ring.metal }}</p>
     <p>{{ ring.stone }}</p>
