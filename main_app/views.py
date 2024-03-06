@@ -24,6 +24,11 @@ class RingCreate(CreateView):
   fields = '__all__'
   success_url= '/inventory/'
 
+  def form_valid(self, form):
+    form.instnace.user = self.request.user
+    return super().form_valid(form)
+  
+
 class RingUpdate(UpdateView):
   model = Ring
   fields = '__all__'
