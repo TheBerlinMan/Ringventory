@@ -38,6 +38,6 @@ class Ring(models.Model):
       return f"{self.name}, sz {self.size}, status {self.status}"
   
   def get_absolute_url(self):
-      return reverse("ring_detail", kwargs={"ring_id": self.id})
+      return reverse("ring-detail", kwargs={"ring_id": self.id})
   
   

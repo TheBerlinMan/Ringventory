@@ -1,0 +1,15 @@
+img{
+  width: 500px;
+}
+
+.con{
+  display: flex;
+}
+
+.login > form{
+  margin: 20px;
+}
+
+h1{
+  color:white;
+}

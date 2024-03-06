@@ -6,18 +6,18 @@
 {% endblock %}
 
 {% block content %}
+<div class="con">
 
-<section class="logo-container">
-  
-  <img 
+  <section class="logo-container">
+    
+    <img 
     src="{% static 'images/Asset 3.svg' %}" 
-    alt="Text reads: Cat Collector"
-  />
-</section>
-
-{% if not user.is_authenticated %}
-
-  <section>
+    alt="Logo"
+    />
+  </section>
+  
+  {% if not user.is_authenticated %}
+  <section class='login'>
     <form action="{% url 'home' %}" method="post" class="login">
       <h1>Login</h1>
       {% csrf_token %}
@@ -26,6 +26,7 @@
       <button type="submit" class="btn submit">Login</button>
     </form>
   </section>
-{% endif %}
+</div>
+  {% endif %}
 
 {% endblock %}

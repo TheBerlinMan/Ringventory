@@ -31,7 +31,7 @@ class RingCreate(LoginRequiredMixin, CreateView):
   success_url= '/inventory/'
 
   def form_valid(self, form):
-    form.instnace.user = self.request.user
+    form.instance.user = self.request.user
     return super().form_valid(form)
   
 
