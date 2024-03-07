@@ -27,7 +27,7 @@ def ring_detail(request, ring_id):
 
 class RingCreate(LoginRequiredMixin, CreateView):
   model = Ring
-  fields = '__all__'
+  fields = ['name', 'status', 'size', 'metal', 'stone', 'condition', 'weight', 'price', 'purchase_point', 'purchase_date']
   success_url= '/inventory/'
 
   def form_valid(self, form):
@@ -37,7 +37,7 @@ class RingCreate(LoginRequiredMixin, CreateView):
 
 class RingUpdate(LoginRequiredMixin, UpdateView):
   model = Ring
-  fields = '__all__'
+  fields = ['name', 'status', 'size', 'metal', 'stone', 'condition', 'weight', 'price', 'purchase_point', 'purchase_date']
 
 class RingDelete(LoginRequiredMixin, DeleteView):
   model = Ring
