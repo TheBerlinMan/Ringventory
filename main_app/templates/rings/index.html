@@ -60,14 +60,17 @@
       {% for ring in rings %}
       
         <div>
-          <td><a href="{% url 'ring-detail' ring.id %}">Select</a></td>
-          <td>{{ring.id}}</td>
-          <td>{{ring.name}}</td>
-          <td>{{ring.status}}</td>
-          <td>{{ring.size}}</td>
-          <td>{{ring.metal}}</td>
-          <td>{{ring.stone}}</td>
-          <td>{{ring.condition}}</td>
+          <tr>
+            <td><a href="{% url 'ring-detail' ring.id %}">Select</a></td>
+            <td>{{ring.id}}</td>
+            <td>{{ring.name}}</td>
+            <td>{{ring.status}}</td>
+            <td>{{ring.size}}</td>
+            <td>{{ring.metal}}</td>
+            <td>{{ring.stone}}</td>
+            <td>{{ring.condition}}</td>
+
+          </tr>
         </div>
       
       {% endfor %}
