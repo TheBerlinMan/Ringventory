@@ -25,18 +25,35 @@
 
 <section class="ring-container">
   <div class="ring-img">
-    {% comment %} <img 
-      src="{% static 'images/sk8r-boi-cat.svg' %}" 
-      alt="A skater boy cat"
-    > {% endcomment %}
+    <img 
+      src="{% static 'images/default-ring.jpeg' %}" 
+      alt="default ring"
+    >
   </div>
   <div class="ring-details">
     <h2>{{ ring.name }}</h2>
-    <p>{{ ring.size }}</p>
-    <p>{{ ring.metal }}</p>
-    <p>{{ ring.stone }}</p>
+    <p><b>Status: </b>{{ ring.status }}</p>
+    <p><b>Size: </b>{{ ring.size }}</p>
+    <p><b>Metal: </b>{{ ring.metal }}</p>
+    <p><b>Stone: </b>{{ ring.stone }}</p>
+    <p><b>Condition:</b> {{ ring.condition }}</p>
+    <p><b>Weight: </b>{{ ring.weight }}g</p>
+    <p><b>Price: </b>${{ ring.price }}</p>
+    <p><b>Purchased At:</b> {{ ring.purchase_point }}</p>
+    <p><b>Purchased Date:</b> {{ ring.purchase_date }}</p>
 
   </div>
 </section>
 
 {% endblock %}
+
+# name
+# status
+# size
+# metal
+# stone
+# condition
+# weight
+# price
+# purchase_point
+# purchase_date
